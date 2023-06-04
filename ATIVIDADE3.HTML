@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>The Element Object</h1>
+<h2>The appendChild() Method</h2>
+
+<ul id="myList">
+  <li>Café</li>
+  <li>Chá</li>
+  <li>Chocolate</li>
+</ul>
+
+<p>Click "Append" to append an item to the end of the list:</p>
+<input type="text" id="itemtext" value="">
+<input type="radio" name="cores" value="pink">ROSA
+<input type="radio" name="cores" value="black">PRETO
+<INPUT type="radio" name="cores" value="blue">AZUL
+
+
+<script>
+//FUNÇÃO PARA ADICIONAR UM ITEM À LISTA  
+function addItemToList() { 
+    const ITEMTEXT=DOCUMENT.GETELEMENTBYID("ITEMTEXT").VALUE;
+    const COR= DOCUMENT.QUERYSELECTOR('INPUT["CORES"]:CHECKED').VALUE
+   
+    const node=document.createElement("li");
+    const textnode=document.createtextnode(itemtext);
+
+    node.appendchild(textnode);
+    node.style.color=cor;//define a cor do item
+
+    document.getelementbyid("mylist").appendchild(node);
+}
+//Adiciona um listener de evento ao botão de "Append"
+document.getelementbyid("appenbutton").addeventlistener("click", addItemToList);
+</script>
+
+</body>
+</html>
