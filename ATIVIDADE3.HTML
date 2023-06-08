@@ -11,13 +11,26 @@
 </ul>
 
 <p>Clique em "Escolher" para adicionar um item ao final da lista</p>
-<input type="text" id="itemtext" value="">
+<input Id="itemText" type="text" value="">
 <input type="radio" name="cores" value="pink">ROSA
 <input type="radio" name="cores" value="green">VERDE
 <INPUT type="radio" name="cores" value="blue">AZUL
  
-    <button onclick="addItemToListId()">Escolher</button>
+    <button onclick="addItemToList()">Escolher</button>
 
-<script>atividade3.js</script>
+<script>
+    function addItemToList() {
+    const itemText = document.getElementById("itemText").value;
+    const cor = document.querySelector('input[name="cores"]:checked').value;
+
+    const node = document.createElement("li");
+    const textnode = document.createTextNode(itemText);
+    node.appendChild(textnode);
+    node.style.color = cor;
+
+    document.getElementById("myList").appendChild(node);
+}
+</script>
+
 </body>
 </html>
