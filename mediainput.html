@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="cab1"> CALCULO DA MEDIA</h1>
+
+    <form id="form-media">
+
+        <fieldset>
+            <label for="notap"> Primeira Nota:</label>
+            <input type="number" id="notap" required placeholder="Digite uma nota"><br><br>
+            <label for="notas"> Segunda Nota:</label>
+            <input type="number" id="notas" required placeholder="Digite uma outra nota"><br><br>
+        </fieldset>
+
+        <br>
+        <button type="submit">Cálculo da Média</button>
+    </form>
+
+    <p>Média: <span id="id_med"></span></p>
+    <p>Resultado: <span id="id_res"></span></p>
+
+    <script>
+        document.getElementById("form-media").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            let n1 = parseFloat(document.getElementById("notap").value);
+            let n2 = parseFloat(document.getElementById("notas").value);
+            let media = (n1 + n2) / 2;
+            document.getElementById("id_med").innerHTML = media;
+
+            if (media >= 6) {
+                document.getElementById("id_res").innerHTML = "Aprovado";
+                document.getElementById("id_res").style.color = "blue";
+            }
+            else {
+                document.getElementById("id_res").innerHTML = "Reprovado";
+                document.getElementById("id_res").style.color = "red";
+
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

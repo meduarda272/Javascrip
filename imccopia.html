@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1> Nome: <span id="id_n"> </span></h1> 
+   <h2> IMC: <span id="id_i"></span></h2>
+   <h3> Resultado: <span id="id_r"></span></h3>
+   <script>
+
+let nome = prompt("Informe o nome");
+let peso = parseFloat(prompt("Informe o peso"));
+let altura = parseFloat(prompt("Informe a altura"));
+let imc_c = (peso / (altura * altura));
+
+document.getElementById("id_n").innerHTML = nome;
+document.getElementById("id_i").innerHTML = imc_c;
+
+if (imc_c < 17 || imc_c > 30) {
+    document.getElementById("id_r").innerHTML = "Muito abaixo do peso"
+    document.getElementById("id_r").style.color = "red";
+} else {
+    if (imc_c >= 17 && imc_c <= 18.49) {
+    document.getElementById("id_r").innerHTML = "Abaixo do peso"
+    document.getElementById("id_r").style.color = "orange";  
+    }
+    else {
+        if (imc_c >= 25 && imc_c < 30) {
+    document.getElementById("id_r").innerHTML = "Acima do peso"
+    document.getElementById("id_r").style.color = "orange";
+        } 
+        else {
+            if (imc_c >= 18.50 && imc_c < 25) {
+    document.getElementById("id_r").innerHTML = "Peso normal"
+    document.getElementById("id_r").style.color = "green";
+            }
+        }
+    }
+}
+if (imc_c >= 30 && imc_c < 35) {
+    document.getElementById("id_r").innerHTML = "Obesidade I"
+    document.getElementById("id_r").style.color = "red";
+            }
+            else {
+            if (imc_c >= 35 && imc_c < 40) {
+    document.getElementById("id_r").innerHTML = "Obesidade II"
+    document.getElementById("id_r").style.color = "red";
+            }
+            else {
+                if (imc_c > 40) {
+    document.getElementById("id_r").innerHTML = "Obesidade III"
+    document.getElementById("id_r").style.color = "red";
+            }
+            }
+        }
+
+   </script>
+</body>
+</html>
