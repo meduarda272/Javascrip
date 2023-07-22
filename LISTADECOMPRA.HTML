@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Compras</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-image:('katelinda.jpg'); /* Substitua 'supermercado.jpg' pelo caminho para sua imagem de fundo */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 20px;
+    }
+
+    h1 {
+      margin: 20px 0;
+    }
+
+    #lista {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    #item {
+      width: 200px;
+      padding: 5px;
+    }
+
+    button {
+      padding: 5px 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lista de Compras</h1>
+  <div id="lista">
+    <input type="text" id="item" placeholder="Digite um item">
+    <button onclick="adicionarItem()">Adicionar</button>
+    <ul id="itens">
+    </ul>
+  </div>
+  <script>
+    // O código JavaScript continua o mesmo
+    // ...
+  </script>
+</body>
+</html>
